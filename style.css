@@ -1,48 +1,60 @@
 * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-body { font-family:'Poppins',sans-serif; background:#0b1c2d; color:white; }
+body { font-family:'Poppins',sans-serif; background:#004f7c; color:white; }
 
 /* NAVBAR */
-.navbar { position:fixed; width:100%; background:rgba(0,0,0,0.8); display:flex; justify-content:space-between; padding:15px 40px; z-index:10;}
+.navbar { position:fixed; width:100%; background:rgba(0,0,0,0.6); display:flex; justify-content:space-between; padding:15px 40px; z-index:10;}
 .navbar ul { display:flex; list-style:none; }
 .navbar ul li { margin-left:25px; }
 .navbar a { color:white; text-decoration:none; }
 
 /* HERO */
-.hero { position:relative; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; background:linear-gradient(135deg,#0b1c2d,#10273f,#1a3655); overflow:hidden; }
-.hero-overlay { position:absolute; inset:0; background: rgba(0,0,0,0.4);}
+.hero { position:relative; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; background: linear-gradient(to bottom, #004f7c, #007ea7, #00b4d8); overflow:hidden;}
 .hero-content { position:relative; z-index:2; }
+
+/* Logos */
 .logo-container { display:flex; justify-content:center; align-items:center; gap:40px; margin-bottom:25px;}
-.college-logo { width:100px; filter:drop-shadow(0 0 10px gold); }
-.event-logo { width:140px; filter:drop-shadow(0 0 15px #ffd700); animation:floatLogo 3s ease-in-out infinite alternate; }
-@keyframes floatLogo { from{transform:translateY(0px);} to{transform:translateY(-15px);} }
+.college-logo { width:100px; filter:drop-shadow(0 0 10px #00ffff); }
+.event-logo { width:140px; filter:drop-shadow(0 0 15px #00ffff); animation: floatLogo 4s ease-in-out infinite alternate; }
+@keyframes floatLogo { from{transform:translateY(0px);} to{transform:translateY(-20px);} }
 
-.hero h1 { font-size:4rem; color:gold; margin-bottom:10px;}
-.hero h2 { font-size:1.8rem; margin-bottom:15px; }
-.tagline { font-size:1.2rem; margin-bottom:15px; }
-.badge { background:gold; color:black; padding:8px 20px; border-radius:20px; margin:10px 0; display:inline-block;}
-.details { margin:15px 0; }
-.btn { padding:10px 25px; border-radius:25px; text-decoration:none; font-weight:bold; margin:5px;}
-.primary { background:gold; color:black;}
-.secondary { border:2px solid gold; color:gold; }
+/* Buttons & Badge */
+.badge { background: #00ffff55; color: white; padding: 8px 20px; border-radius: 20px; margin: 15px 0; backdrop-filter: blur(5px); }
+.hero-buttons .btn.primary { background: #00ffff; color: #004f7c; }
+.hero-buttons .btn.secondary { border:2px solid #00ffff; color:#00ffff; }
 
-/* SECTIONS */
+/* Bubbles */
+.bubbles { position:absolute; width:100%; height:100%; top:0; left:0; overflow:hidden; z-index:1; }
+.bubbles span { position:absolute; bottom:-100px; width:20px; height:20px; background: rgba(0,255,255,0.3); border-radius:50%; animation: rise 10s infinite ease-in; }
+.bubbles span:nth-child(1){ left:10%; animation-duration:12s; width:15px; height:15px;}
+.bubbles span:nth-child(2){ left:20%; animation-duration:9s; width:20px; height:20px;}
+.bubbles span:nth-child(3){ left:30%; animation-duration:11s; width:18px; height:18px;}
+.bubbles span:nth-child(4){ left:40%; animation-duration:10s; width:22px; height:22px;}
+.bubbles span:nth-child(5){ left:50%; animation-duration:13s; width:17px; height:17px;}
+.bubbles span:nth-child(6){ left:60%; animation-duration:12s; width:19px; height:19px;}
+.bubbles span:nth-child(7){ left:70%; animation-duration:14s; width:16px; height:16px;}
+.bubbles span:nth-child(8){ left:80%; animation-duration:11s; width:21px; height:21px;}
+.bubbles span:nth-child(9){ left:90%; animation-duration:10s; width:18px; height:18px;}
+.bubbles span:nth-child(10){ left:95%; animation-duration:12s; width:20px; height:20px;}
+@keyframes rise {0%{transform:translateY(0) scale(1); opacity:0;}50%{opacity:0.5;}100%{transform:translateY(-110vh) scale(1.5); opacity:0;}}
+
+/* Sections */
 section { padding:100px 10%; text-align:center; }
-.dark-section { background:#10273f; }
+.dark-section { background:#007ea7; }
 
-/* EVENTS */
+/* Events */
 .event-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:40px; }
-.event-card { background:#1a3655; padding:25px; border-radius:10px; transition:0.3s; }
-.event-card:hover { transform:translateY(-10px); box-shadow:0 0 20px gold; }
+.event-card { background:#0096c7; padding:25px; border-radius:10px; transition:0.3s; }
+.event-card:hover { transform:translateY(-10px); box-shadow:0 0 20px #00ffff; }
 
-/* REGISTER FORM */
+/* Registration */
 .registration-form { display:flex; flex-direction:column; width:300px; margin:auto; }
 .registration-form input { margin-bottom:15px; padding:10px; }
 
-/* FOOTER */
-footer { background:black; padding:20px; }
+/* Footer */
+footer { background:#004f7c; padding:20px; }
 
-/* RESPONSIVE */
-@media(max-width:768px) {
+/* Responsive */
+@media(max-width:768px){
     .logo-container { flex-direction:column; gap:20px; }
     .college-logo { width:80px; }
     .event-logo { width:120px; }
