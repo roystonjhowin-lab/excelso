@@ -69,46 +69,62 @@
     </div>
 </section>
 
+<!-- Registration Section -->
 <section id="register">
-    <h2>Register Now</h2>
+  <h2>Register Now</h2>
 
-    <!-- Step 1: College & Lecturer -->
-    <form id="step1" class="registration-step">
-        <h3>Step 1: College & Lecturer Info</h3>
-        <input type="text" name="college" placeholder="College Name" required>
-        <input type="text" name="course" placeholder="Course" required>
+  <!-- Step 1: College + Lecturer Email -->
+  <form id="step1" class="registration-step" 
+        action="https://formspree.io/f/YOUR_FORM_ID" 
+        method="POST" target="hidden_iframe" 
+        onsubmit="nextStep(1)">
+    <h3>Step 1: College Info & Lecturer Email</h3>
 
-        <input type="text" name="lecturer_name" placeholder="Lecturer in-charge Name" required>
-        <input type="tel" name="lecturer_phone" placeholder="Lecturer in-charge Phone" required>
-       
-        <button type="button" class="btn primary" onclick="nextStep(1)">Next</button>
-    </form>
+    <input type="text" name="college" placeholder="College Name" required>
+    <input type="text" name="course" placeholder="Course" required>
+    <input type="email" name="lecturer_email" placeholder="Lecturer In-Charge Email" required>
 
-    <!-- Step 2: Event Selection -->
-    <form id="step2" class="registration-step" style="display:none;" action="https://formspree.io/f/xykdjwab" method="POST">
-        <h3>Step 2: Event Selection & Participants</h3>
+    <button type="submit" class="btn primary">Next</button>
+  </form>
 
-        <!-- Example Event -->
-        <label><input type="checkbox" name="events" value="UpsideDown Abyss" onclick="updateParticipants(this)"> UpsideDown Abyss</label>
-        <div class="participants" id="UpsideDown Abyss"></div>
+  <!-- Hidden iframe to prevent page reload -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-        <label><input type="checkbox" name="events" value="Sunken Strategy Quest" onclick="updateParticipants(this)"> Sunken Strategy Quest</label>
-        <div class="participants" id="Sunken Strategy Quest"></div>
+  <!-- Step 2: Event Selection + Participants -->
+  <form id="step2" class="registration-step" style="display:none;" 
+        action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <h3>Step 2: Event Selection & Participants</h3>
 
-        <label><input type="checkbox" name="events" value="The Comeback Arena" onclick="updateParticipants(this)"> The Comeback Arena</label>
-        <div class="participants" id="The Comeback Arena"></div>
+    <label>
+      <input type="checkbox" name="events" value="UpsideDown Abyss" onclick="updateParticipants(this)"> UpsideDown Abyss
+    </label>
+    <div class="participants" id="UpsideDown Abyss"></div>
 
-        <label><input type="checkbox" name="events" value="Aquavengers – The Oceanic Endgame" onclick="updateParticipants(this)"> Aquavengers – The Oceanic Endgame</label>
-        <div class="participants" id="Aquavengers – The Oceanic Endgame"></div>
+    <label>
+      <input type="checkbox" name="events" value="Sunken Strategy Quest" onclick="updateParticipants(this)"> Sunken Strategy Quest
+    </label>
+    <div class="participants" id="Sunken Strategy Quest"></div>
 
-        <label><input type="checkbox" name="events" value="Timeless Tides" onclick="updateParticipants(this)"> Timeless Tides</label>
-        <div class="participants" id="Timeless Tides"></div>
+    <label>
+      <input type="checkbox" name="events" value="The Comeback Arena" onclick="updateParticipants(this)"> The Comeback Arena
+    </label>
+    <div class="participants" id="The Comeback Arena"></div>
 
-        <button type="submit" class="btn primary">Submit Registration</button>
-    </form>
+    <label>
+      <input type="checkbox" name="events" value="Aquavengers – The Oceanic Endgame" onclick="updateParticipants(this)"> Aquavengers – The Oceanic Endgame
+    </label>
+    <div class="participants" id="Aquavengers – The Oceanic Endgame"></div>
+
+    <label>
+      <input type="checkbox" name="events" value="Timeless Tides" onclick="updateParticipants(this)"> Timeless Tides
+    </label>
+    <div class="participants" id="Timeless Tides"></div>
+
+    <button type="submit" class="btn primary">Submit Registration</button>
+  </form>
 </section>
 
-<!-- CONTACT -->
+    <!-- CONTACT -->
 <section id="contact" class="dark-section">
     <h2>Event Coordinators</h2>
     <p>Ms. Melita Crasta – +91 90195 26429</p>
@@ -118,7 +134,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>@excels0_2026</p>
+    <p>@excelso_2026</p>
     <p>Hampankatta, Mangaluru – 575001</p>
     <p>© EXCSELSO’26</p>
 </footer>
