@@ -69,54 +69,70 @@
     </div>
 </section>
 
-<!-- Registration Section -->
 <section id="register">
   <h2>Register Now</h2>
 
-  <!-- Step 1: College + Lecturer Email -->
-  <form id="step1" class="registration-step" 
-        action="https://formspree.io/f/xykdjwab" 
-        method="POST" target="hidden_iframe" 
-        onsubmit="nextStep(1)">
-    <h3>Step 1: College Info & Lecturer Email</h3>
+  <!-- Step 1 -->
+  <form id="step1" class="registration-step"
+        action="https://formspree.io/f/xykdjwab"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="nextStep()">
+
+    <h3>Step 1: College & Faculty Details</h3>
 
     <input type="text" name="college" placeholder="College Name" required>
     <input type="text" name="course" placeholder="Course" required>
-    <input type="text" name="lecturer_name" placeholder="Lecturer In-Charge name and contact" required>
+
+    <input type="text" name="faculty_name" placeholder="Faculty In-Charge Name" required>
+    <input type="tel" name="faculty_contact" placeholder="Faculty Contact Number" required>
 
     <button type="submit" class="btn primary">Next</button>
   </form>
 
-  <!-- Hidden iframe to prevent page reload -->
+  <!-- Hidden iframe (prevents reload) -->
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-  <!-- Step 2: Event Selection + Participants -->
-  <form id="step2" class="registration-step" style="display:none;" 
-        action="https://formspree.io/f/xykdjwab" method="POST">
-    <h3>Step 2: Event Selection & Participants</h3>
+  <!-- Step 2 -->
+  <form id="step2" class="registration-step"
+        style="display:none;"
+        action="https://formspree.io/f/xykdjwab"
+        method="POST">
+
+    <h3>Step 2: Select Events & Add Participants</h3>
 
     <label>
-      <input type="checkbox" name="events" value="UpsideDown Abyss" onclick="updateParticipants(this)"> UpsideDown Abyss
+      <input type="checkbox" value="UpsideDown Abyss"
+             onclick="updateParticipants(this)">
+      UpsideDown Abyss
     </label>
     <div class="participants" id="UpsideDown Abyss"></div>
 
     <label>
-      <input type="checkbox" name="events" value="Sunken Strategy Quest" onclick="updateParticipants(this)"> Sunken Strategy Quest
+      <input type="checkbox" value="Sunken Strategy Quest"
+             onclick="updateParticipants(this)">
+      Sunken Strategy Quest
     </label>
     <div class="participants" id="Sunken Strategy Quest"></div>
 
     <label>
-      <input type="checkbox" name="events" value="The Comeback Arena" onclick="updateParticipants(this)"> The Comeback Arena
+      <input type="checkbox" value="The Comeback Arena"
+             onclick="updateParticipants(this)">
+      The Comeback Arena
     </label>
     <div class="participants" id="The Comeback Arena"></div>
 
     <label>
-      <input type="checkbox" name="events" value="Aquavengers – The Oceanic Endgame" onclick="updateParticipants(this)"> Aquavengers – The Oceanic Endgame
+      <input type="checkbox" value="Aquavengers – The Oceanic Endgame"
+             onclick="updateParticipants(this)">
+      Aquavengers – The Oceanic Endgame
     </label>
     <div class="participants" id="Aquavengers – The Oceanic Endgame"></div>
 
     <label>
-      <input type="checkbox" name="events" value="Timeless Tides" onclick="updateParticipants(this)"> Timeless Tides
+      <input type="checkbox" value="Timeless Tides"
+             onclick="updateParticipants(this)">
+      Timeless Tides
     </label>
     <div class="participants" id="Timeless Tides"></div>
 
