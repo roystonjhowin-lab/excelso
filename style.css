@@ -14,7 +14,6 @@ body { font-family:'Poppins',sans-serif; background:#004f7c; color:white; }
 /* Logos */
 .logo-container { display:flex; justify-content:center; align-items:center; gap:40px; margin-bottom:25px;}
 .college-logo { width:100px; filter:drop-shadow(0 0 10px #00ffff); }
-.event-logo { width:1000px; filter:drop-shadow(0 0 15px #00ffff); }
 @keyframes floatLogo { from{transform:translateY(0px);} to{transform:translateY(-20px);} }
 
 /* Buttons & Badge */
