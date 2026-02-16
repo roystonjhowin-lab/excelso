@@ -47,8 +47,44 @@ section { padding:100px 10%; text-align:center; }
 .event-card:hover { transform:translateY(-10px); box-shadow:0 0 20px #00ffff; }
 
 /* Registration */
-.registration-form { display:flex; flex-direction:column; width:300px; margin:auto; }
-.registration-form input { margin-bottom:15px; padding:10px; }
+.registration-step {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+  width: 350px;
+  padding: 20px;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.registration-step input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.participants input {
+  margin-top: 5px;
+}
+
+button.btn.primary {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00ffff;
+  color: #004f7c;
+  transition: 0.3s;
+}
+
+button.btn.primary:hover {
+  background: #00e5ff;
+  transform: scale(1.05);
+}
 
 /* Footer */
 footer { background:#004f7c; padding:20px; }
