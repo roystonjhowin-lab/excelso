@@ -121,3 +121,58 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
     .event-grid { grid-template-columns: 1fr; }
     .free-entry { position: static; display: inline-block; margin-top: 15px; }
 }
+/* 1. HIGHLIGHT FACULTY IN-CHARGE */
+.faculty-highlight {
+    color: #ffd700; /* Gold */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    display: block;
+    margin-top: 10px;
+}
+
+/* 2. GOLD FRAME FOR CONTACT SECTION */
+#contact {
+    position: relative;
+    border: 5px solid #d4af37; /* Metallic Gold */
+    border-image: linear-gradient(45deg, #af8e1c, #fff9ae, #af8e1c) 1;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    margin: 40px 10%;
+    border-radius: 4px; /* Note: border-image disables border-radius, use clip-path if needed */
+}
+
+/* 3. CARNIVAL ANIMATIONS (Floating & Glowing) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.event-logo {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Carnival String Lights Effect for the Header */
+.site-header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 10px;
+    background: radial-gradient(circle, #ff0 20%, transparent 20%);
+    background-size: 30px 30px;
+    opacity: 0.6;
+}
+
+/* 4. BUTTON GLOW */
+.rules-toggle {
+    box-shadow: 0 0 15px var(--primary-cyan);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px var(--primary-cyan); }
+    50% { box-shadow: 0 0 20px var(--primary-cyan); }
+    100% { box-shadow: 0 0 5px var(--primary-cyan); }
+}
