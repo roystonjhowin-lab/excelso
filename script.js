@@ -22,7 +22,21 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, { threshold: 0.1 });
+// Add this at the top of your script
+const fireConfetti = () => {
+    // This is a simplified logic; usually, you'd use a library like 'canvas-confetti'
+    console.log("Confetti Celebration!"); 
+    // If you use the library, use: confetti();
+};
 
+document.querySelectorAll('.rules-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        // Trigger confetti when they open the rules
+        if(button.getAttribute('aria-expanded') === 'false') {
+            fireConfetti();
+        }
+    });
+});
 document.querySelectorAll('.event-card').forEach(card => {
     observer.observe(card);
 });
