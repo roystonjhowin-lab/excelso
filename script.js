@@ -1,28 +1,31 @@
-console.log("EXCSELSO’26 Website Loaded Successfully!");
+console.log("EXCSELSO’26 Aquatic Website Loaded Successfully!");
 
-// Rules toggle
+// Rules Toggle
 document.querySelectorAll('.rules-toggle').forEach(button => {
     button.addEventListener('click', () => {
-        const rulesDiv = document.getElementById(button.getAttribute('aria-controls'));
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !isExpanded);
-        if (rulesDiv.style.display === 'block') {
-            rulesDiv.style.display = 'none';
-        } else {
-            rulesDiv.style.display = 'block';
-        }
+        const rules = document.getElementById(button.getAttribute('aria-controls'));
+        const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+        rules.style.display = expanded ? 'none' : 'block';
+        button.setAttribute('aria-expanded', !expanded);
     });
 });
 
-// Animate event cards on scroll
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('fade-in');
-        }
-    });
-}, { threshold: 0.1 });
+// Floating Treasure Hunt Coordinator Bubbles
+const treasureHuntCoordinators = [
+    {name:"Leesha Lobo", role:"Treasure Hunt Student", phone:"+919148502215"},
+    {name:"Rohan Dsouza", role:"Treasure Hunt Student", phone:"+918453984299"},
+    {name:"Mohammed Azman", role:"Treasure Hunt Student", phone:"+916360891633"},
+];
 
-document.querySelectorAll('.event-card').forEach(card => {
-    observer.observe(card);
+treasureHuntCoordinators.forEach(coord => {
+    const bubble = document.createElement('div');
+    bubble.classList.add('coordinator-bubble');
+    bubble.innerHTML = `<a href="tel:${coord.phone}" style="color:#004f7c;text-decoration:none"><strong>${coord.name}</strong><br>${coord.role}</a>`;
+    document.body.appendChild(bubble);
+    const x = Math.random() * window.innerWidth * 0.9;
+    const y = Math.random() * window.innerHeight * 0.7;
+    bubble.style.left = `${x}px`;
+    bubble.style.top = `${y}px`;
 });
+
+// Hero Floating Bubbles already handled by CSS animation
