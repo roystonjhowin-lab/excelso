@@ -71,3 +71,33 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
     .college-logo-small { width:40px; }
     .event-grid { grid-template-columns:1fr; }
 }
+/* EXCSELSO'26 Logo below "Presents" */
+.excelso-logo-container {
+    text-align: center;
+    margin-top: 15px;
+}
+.excelso-logo {
+    width: 120px;
+}
+
+/* General Rules - FREE ENTRY fix for mobile */
+.free-entry {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00ffff;
+    color: #004f7c;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    white-space: nowrap; /* prevent text wrap */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-top { flex-direction: column; gap: 10px; }
+    .college-logo-small { width: 40px; }
+    .excelso-logo { width: 100px; margin-top: 10px; }
+    .event-grid { grid-template-columns: 1fr; }
+    .free-entry { position: static; display: inline-block; margin-top: 15px; }
+}
