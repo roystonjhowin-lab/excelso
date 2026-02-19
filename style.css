@@ -499,27 +499,7 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
         opacity: 0.8;
         transform: translate(-30%, -50%) scaleX(1.6) scaleY(0.8);
     }
-/* RESET */
-* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-body { font-family:'Poppins', sans-serif; background:#004f7c; color:white; line-height:1.6; }
-
-/* NAVBAR */
-.navbar { position:fixed; width:100%; top:0; background:rgba(0,0,0,0.7); display:flex; justify-content:space-between; align-items:center; padding:15px 30px; z-index:1000; }
-.navbar ul { display:flex; list-style:none; gap:20px; }
-.navbar a:hover { color:#00ffff; }
-.college-logo-small { height:65px; }
-.instagram-link { display:flex; align-items:center; gap:5px; font-size:0.9rem; }
-.instagram-icon { width:20px; }
-
-/* HEADER */
-.site-header { padding-top:80px; text-align:center; background: linear-gradient(to bottom,#004f7c,#007ea7,#00b4d8); position:relative; overflow:hidden; }
-.header-top { display:flex; justify-content:center; align-items:center; gap:15px; margin-bottom:10px; }
-.college-info { font-size:0.9rem; font-weight:600; }
-.department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; color: #ffd60a; text-transform:uppercase; letter-spacing:1px; }
-.presents { display:block; font-family:'Playfair Display', serif; font-size
 
 
-roystondcunha28@gmail.com
-           
 
 
