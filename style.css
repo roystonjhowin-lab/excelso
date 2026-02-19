@@ -104,13 +104,11 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 }
 /* EXCSELSO'26 Logo below "Presents" */
 .excelso-logo {
-    width: 450px;   /* smaller */
-    max-width: 85%;
+    width: 1000px !important;
+    max-width: 98%;
     height: auto;
-    margin: 20px auto;
-}
-    
-    opacity: 0;
+}    
+ opacity: 0;
     transform: scale(0.8) translateY(40px);
     animation: logoReveal 1.5s ease-out forwards;
 }
