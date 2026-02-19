@@ -157,3 +157,38 @@ ${participantDetails}
         res.status(500).json({ message: 'Error sending email' });
     }
 }
+async function submitRegistration() {
+
+    const eventSelect = document.getElementById("eventSelect");
+    const participantsInputs = document.querySelectorAll("#participantsContainer input");
+
+    const participants = [];
+    for (let i = 0; i < participantsInputs.length; i += 2) {
+        participants.push({
+            name: participantsInputs[i].value,
+            contact: participantsInputs[i + 1].value
+        });
+    }
+
+    const data = {
+        collegeName: document.getElementById("collegeName").value,
+        collegePlace: document.getElementById("collegePlace").value,
+        facultyName: document.getElementById("facultyName").value,
+        facultyContact: document.getElementById("facultyContact").value,
+        event: eventSelect.options[eventSelect.selectedIndex].text,
+        participants
+    };
+
+    const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+        document.getElementById("successPopup").style.display = "flex";
+        localStorage.setItem("excelso_registered", "true");
+    } else {
+        alert("Something went wrong. Please try again.");
+    }
+}
