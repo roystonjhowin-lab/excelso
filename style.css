@@ -286,9 +286,9 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 .excelso-logo {
     animation: logoReveal 1.5s ease-out forwards, glowPulse 3s infinite;
 }
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .site-header {
-        padding: 60px 15px;
+        padding: 100px 50px;
     }
 }
 
