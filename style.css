@@ -227,17 +227,11 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 .college-logo-small {
     height: 70px;   /* Increase this (try 70–90px) */
     width: auto;
-}
-.excelso-logo {
-    height: 220px;.event-logo {
-    height: 120px;   /* Try 120–150px */
-    width: auto;
-    margin-bottom: 15px;
-}
-
 .event-logo {
-    max-width: 80%;
+    width: 220px;
     height: auto;
 }
-}
+
+
+
 
