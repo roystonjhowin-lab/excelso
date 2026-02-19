@@ -225,26 +225,44 @@
     <section id="register" class="registration-section">
     <div class="registration-content">
 
-        <h2 class="register-title">Register for EXCELSO’26</h2>
+        <h2 class="register-title">EXCELSO’26 Registration</h2>
 
-        <p class="register-tagline">
-            Limited Slots Available • National Level Competition
-        </p>
+        <!-- STEP 1 -->
+        <div id="step1" class="form-step active">
+            <h3>College Details</h3>
 
-        <div class="register-countdown">
-            Event Begins In:
-            <div id="mini-countdown"></div>
+            <input type="text" id="collegeName" placeholder="College Name" required>
+            <input type="text" id="collegePlace" placeholder="College Location" required>
+            <input type="text" id="facultyName" placeholder="Faculty In-Charge Name" required>
+            <input type="tel" id="facultyContact" placeholder="Faculty Contact Number" required>
+
+            <button onclick="goToStep2()" class="register-btn">
+                Proceed to Event Selection
+            </button>
         </div>
 
- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeC40-HLM490dpiRrk1CcklYJ_FKWYzYMHb_uqCqAYzj4X5Qw/viewform?embedded=true" width="640" height="1048" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</section>
-           target="_blank"
-           class="register-btn">
-           Register Now
-        </a>
+        <!-- STEP 2 -->
+        <div id="step2" class="form-step">
+            <h3>Select Event</h3>
+
+            <select id="eventSelect" onchange="generateParticipants()" required>
+                <option value="">Choose Event</option>
+                <option value="2">UpsideDown Abyss (Quiz)</option>
+                <option value="2">Sunken Strategy Quest (Treasure Hunt)</option>
+                <option value="2">The Comeback Arena (Marketing)</option>
+                <option value="1">Aquavengers – Best Manager</option>
+                <option value="1">Timeless Tides (Reels)</option>
+            </select>
+
+            <div id="participantsContainer"></div>
+
+            <button onclick="submitRegistration()" class="register-btn">
+                Submit Registration
+            </button>
+        </div>
 
         <p class="register-note">
-            FREE ENTRY • Food & Refreshments Provided
+            FREE ENTRY 
         </p>
 
     </div>
