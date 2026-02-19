@@ -72,8 +72,11 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 /* RESPONSIVE */
 @media(max-width:768px){
     .header-top { flex-direction:column; gap:10px; }
-    .college-logo-small { width:50px; }
-    .event-grid { grid-template-columns:1fr; }
+    .college-logo-small {
+    height: 100px;
+    width: auto;
+}
+   .event-grid { grid-template-columns:1fr; }
 }
 .about-section h2 {
     font-size:2rem;
