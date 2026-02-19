@@ -104,7 +104,7 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 }
 /* EXCSELSO'26 Logo below "Presents" */
 .excelso-logo {
-    width: 1000px !important;
+    width: 1500px !important;
     max-width: 98%;
     height: auto;
 }    
@@ -289,6 +289,92 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
     .site-header {
         padding: 100px 50px;
     }
+{
+.site-header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #001219, #003566, #001d3d);
+}
+
+/* Moving ocean waves */
+.site-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 200px;
+    background: url("https://www.transparenttextures.com/patterns/wavecut.png");
+    opacity: 0.2;
+    animation: waveMove 20s linear infinite;
+}
+
+@keyframes waveMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.excelso-logo-container {
+    position: relative;
+}
+
+.excelso-logo-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: smokePulse 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes smokePulse {
+    0%,100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.excelso-logo {
+    position: relative;
+    z-index: 2;
+}
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveParticles 60s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes moveParticles {
+    from { background-position: 0 0; }
+    to { background-position: 500px 500px; }
+}
+#countdown {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #ffd60a;
+    font-weight: 600;
+}
+.department-line {
+    color: #ffd60a;
+}
+.presents {
+    color: #ff4d6d;
+    font-weight: 700;
+}
+#contact h2 {
+    color: #00b4d8;
 }
 
 
