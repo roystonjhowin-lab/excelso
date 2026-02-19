@@ -36,7 +36,7 @@ section { padding:80px 10%; }
 /* EVENTS GRID */
 .event-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:40px; }
 .event-card { background:rgba(0,255,255,0.1); border-radius:15px; padding:20px; text-align:center; position:relative; overflow:hidden; transition:0.3s; }
-.event-card:hover { transform:translateY(-10px); box-shadow:0 0 25px #00ffff; }
+.event-card:hover { transform:translateY(-20px); box-shadow:0 0 25px #00ffff; }
 .event-logo { width:80px; margin-bottom:10px; }
 
 /* CONVENORS TABLE */
@@ -68,7 +68,7 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 /* RESPONSIVE */
 @media(max-width:768px){
     .header-top { flex-direction:column; gap:10px; }
-    .college-logo-small { width:40px; }
+    .college-logo-small { width:50px; }
     .event-grid { grid-template-columns:1fr; }
 }
 .about-section h2 {
