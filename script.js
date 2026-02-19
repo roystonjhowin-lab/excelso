@@ -108,3 +108,52 @@ if (countdownElement) {
         `;
     }, 1000);
 }
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export default async function handler(req, res) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Method not allowed' });
+    }
+
+    try {
+        const {
+            collegeName,
+            collegePlace,
+            facultyName,
+            facultyContact,
+            event,
+            participants
+        } = req.body;
+
+        const participantDetails = participants.map((p, index) => `
+            Participant ${index + 1}:
+            Name: ${p.name}
+            Contact: ${p.contact}
+        `).join('\n');
+
+        await resend.emails.send({
+            from: 'EXCELSO <onboarding@resend.dev>',
+            to: 'YOUR_EMAIL@gmail.com',
+            subject: 'New EXCELSO’26 Registration',
+            text: `
+College: ${collegeName}
+Location: ${collegePlace}
+
+Faculty In-Charge:
+Name: ${facultyName}
+Contact: ${facultyContact}
+
+Event: ${event}
+
+${participantDetails}
+            `
+        });
+
+        res.status(200).json({ message: 'Registration successful' });
+
+    } catch (error) {
+        res.status(500).json({ message: 'Error sending email' });
+    }
+}
