@@ -382,6 +382,125 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
 #contact h2 {
     color: #00b4d8;
 }
+.excelso-logo {
+    width: 900px !important;
+    max-width: 95%;
+    height: auto;
+    animation: dragonPulse 4s infinite alternate;
+}
+
+@keyframes dragonPulse {
+    from {
+        filter: drop-shadow(0 0 20px rgba(255,140,0,0.6));
+    }
+    to {
+        filter: drop-shadow(0 0 50px rgba(255,0,0,0.9));
+    }
+}
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ffd60a 1px, transparent 1px);
+    background-size: 60px 60px, 120px 120px;
+    animation: moveParticles 80s linear infinite;
+    opacity: 0.15;
+}
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ffd60a 1px, transparent 1px);
+    background-size: 60px 60px, 120px 120px;
+    animation: moveParticles 80s linear infinite;
+    opacity: 0.15;
+}
+.site-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    animation: sweep 8s infinite;
+}
+
+@keyframes sweep {
+    from { left: -100%; }
+    to { left: 100%; }
+}
+.department-line {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffd60a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.presents {
+    color: #ff4d6d;
+    font-weight: 800;
+    text-shadow: 0 0 10px #ff4d6d;
+}
+#contact h2 {
+    color: #00b4d8;
+    font-size: 28px;
+    letter-spacing: 2px;
+}.excelso-logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* FIRE ELEMENT */
+.fire-breath {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, 
+        rgba(255,140,0,0.9) 0%, 
+        rgba(255,69,0,0.8) 30%, 
+        rgba(255,0,0,0.6) 50%, 
+        transparent 70%);
+    transform: translate(-50%, -50%) scaleX(0.3);
+    opacity: 0;
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: dragonFire 5s infinite ease-in-out;
+}
+
+/* FIRE ANIMATION */
+@keyframes dragonFire {
+    0%, 85%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleX(0.3);
+    }
+    88% {
+        opacity: 1;
+        transform: translate(-40%, -50%) scaleX(1.2) scaleY(0.6);
+    }
+    92% {
+        opacity: 0.8;
+        transform: translate(-30%, -50%) scaleX(1.6) scaleY(0.8);
+    }
+}
+
 
 
 
