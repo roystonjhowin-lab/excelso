@@ -26,11 +26,6 @@ a { text-decoration:none; color:white; }
     color: #008BFF;/* 
 }
     /* GENERAL RULES AND GUIDELINES */
-   .gradient-text {
-  background: linear-gradient(90deg, #02e0b9, #f9db84, #ff8334);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
     .rules-section, 
 .rules-section * {
   color: #00bfff !important; /* Neon Blue forced */
@@ -155,6 +150,11 @@ section { padding:80px 10%; }
 .about-section p { margin-top:15px; }
 
 /* GENERAL RULES */
+ .gradient-text {
+  background: linear-gradient(90deg, #02e0b9, #f9db84, #ff8334);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .rules-section {
   position: relative;
   padding: 60px 30px;
