@@ -23,7 +23,93 @@ a { text-decoration:none; color:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
-    color: #fff607;
+    color: #fff607;/* ==============================
+   CINEMATIC FIRE & AQUA COUNTDOWN
+============================== */
+
+.cinematic-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+.cinematic-countdown span {
+    display: block;
+    padding: 20px 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* FIRE SIDE */
+.fire-side span {
+    background: radial-gradient(circle, #ff4d00, #8b0000);
+    color: #ffd700;
+    text-shadow: 0 0 20px #ff4500;
+    animation: fireGlow 2s infinite alternate;
+}
+
+@keyframes fireGlow {
+    from { box-shadow: 0 0 15px #ff4500; }
+    to { box-shadow: 0 0 40px #ff0000; }
+}
+
+/* AQUA SIDE */
+.aqua-side span {
+    background: radial-gradient(circle, #00c6ff, #003566);
+    color: #ffffff;
+    text-shadow: 0 0 20px #00ffff;
+    animation: aquaGlow 2s infinite alternate;
+}
+
+@keyframes aquaGlow {
+    from { box-shadow: 0 0 15px #00ffff; }
+    to { box-shadow: 0 0 40px #0077ff; }
+}
+
+.cinematic-countdown small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* FLOATING FISHES */
+.floating-fishes {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 40%;
+    pointer-events: none;
+}
+
+.fish {
+    position: absolute;
+    font-size: 2rem;
+    animation: swim 12s linear infinite;
+}
+
+.fish1 { top: 10%; left: -50px; animation-delay: 0s; }
+.fish2 { top: 50%; left: -100px; animation-delay: 3s; }
+.fish3 { top: 70%; left: -150px; animation-delay: 6s; }
+
+@keyframes swim {
+    from { transform: translateX(0); }
+    to { transform: translateX(120vw); }
+}
+.fire-side span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+    animation: flicker 1s infinite alternate;
+    border-radius: 20px;
+}
+
 }
 .presents { display:block; font-family:'Playfair Display', serif; font-size:2rem; color:#fccf31; margin-top:5px; }
 
