@@ -137,6 +137,8 @@ a { text-decoration:none; color:white; }
     animation: flicker 1s infinite alternate;
     border-radius: 20px;
 }
+
+}
 .presents { display:block; font-family:'Playfair Display', serif; font-size:2rem; color:#fccf31; margin-top:5px; }
 
 /* HERO DETAILS */
