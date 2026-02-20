@@ -23,48 +23,42 @@ a { text-decoration:none; color:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
-    color: #4fc3f7;/* ==============================
-/* ==============================
-   🔹 GENERAL RULES TEXT - NEON BLUE
+    color: #4fc3f7;/* /* ==============================
+   🔹 GENERAL RULES & GUIDELINES - NEON BLUE FORCED
 ============================== */
-.rules-section p,
-.rules-section li {
-  color: #00bfff; /* Neon Blue */
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-shadow:
+.rules-section, 
+.rules-section * {
+  color: #00bfff !important; /* Neon Blue forced */
+  text-shadow: 
     0 0 5px #00bfff,
     0 0 10px #00ffff,
     0 0 20px #00bfff,
-    0 0 30px #00ffff;
+    0 0 30px #00ffff !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
 }
 
 /* Headings inside rules */
 .rules-section h2,
 .rules-section h3 {
-  color: #00bfff;
-  font-size: 2rem;
-  font-weight: 700;
+  color: #00bfff !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
   text-shadow:
     0 0 10px #00bfff,
     0 0 20px #00ffff,
     0 0 40px #00bfff,
-    0 0 60px #00ffff;
+    0 0 60px #00ffff !important;
 }
 
 /* Optional: subtle 3D floating effect */
-.rules-section h2, .rules-section h3, .rules-section p, .rules-section li {
+.rules-section h2, 
+.rules-section h3, 
+.rules-section p, 
+.rules-section li {
   transform: translateZ(0);
   perspective: 800px;
 }
-.cinematic-countdown {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 800;
-    text-align: center;
 }
 .cinematic-countdown span {
     display: block;
