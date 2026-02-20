@@ -224,7 +224,25 @@ section { padding:80px 10%; }
     max-width: 250px;
     height: auto;
 }
+/* Registration Card Glass + Neon Glow */
+.registration-card {
+  background: rgba(0, 255, 255, 0.1); /* transparent glass */
+  backdrop-filter: blur(15px);        /* soft blur */
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2), 0 0 80px rgba(0, 255, 255, 0.1);
+  animation: floatCard 6s ease-in-out infinite alternate;
+}
 
+/* Subtle floating effect */
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 /* CONVENORS TABLE */
 .convenors-table { width:100%; border-collapse:collapse; margin-top:10px; }
 .convenors-table th, .convenors-table td { border:1px solid #00ffff; padding:5px; font-size:0.9rem; }
