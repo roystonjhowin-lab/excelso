@@ -129,95 +129,28 @@ prevBtns.forEach(btn => {
 
 showStep(currentStep);
 
-// ==============================
-// MULTI STEP FORM
-// ==============================
-const steps = document.querySelectorAll(".form-step");
-const nextBtns = document.querySelectorAll(".next-btn");
-const prevBtns = document.querySelectorAll(".prev-btn");
-
-let currentStep = 0;
-
-function showStep(step) {
-  steps.forEach((s, index) => {
-    s.classList.remove("active");
-    if (index === step) s.classList.add("active");
-  });
-}
-
-nextBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    if (currentStep < steps.length - 1) {
-      currentStep++;
-      showStep(currentStep);
-    }
-  });
-});
-
-prevBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    if (currentStep > 0) {
-      currentStep--;
-      showStep(currentStep);
-    }
-  });
-});
-
-// ==============================
-// GENERATE PARTICIPANT FIELDS
-// ==============================
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+// Dynamic Participants
+const eventSelect = document.getElementById("eventSelect");
 const container = document.getElementById("participantsContainer");
 
-checkboxes.forEach(box => {
-  box.addEventListener("change", () => {
-    container.innerHTML = "";
+eventSelect.addEventListener("change", function() {
+  container.innerHTML = "";
+  let count = 0;
 
-    checkboxes.forEach(cb => {
-      if (cb.checked) {
-        const count = parseInt(cb.dataset.count);
-        const eventName = cb.value;
-
-        const eventTitle = document.createElement("h3");
-        eventTitle.textContent = eventName + " Participants";
-        eventTitle.style.marginTop = "20px";
-        container.appendChild(eventTitle);
-
-        for (let i = 1; i <= count; i++) {
-
-          const nameInput = document.createElement("input");
-          nameInput.type = "text";
-          nameInput.name = `${eventName} - Participant ${i} Name`;
-          nameInput.placeholder = `Participant ${i} Name`;
-          nameInput.required = true;
-
-          const phoneInput = document.createElement("input");
-          phoneInput.type = "tel";
-          phoneInput.name = `${eventName} - Participant ${i} Contact`;
-          phoneInput.placeholder = `Participant ${i} Contact Number`;
-          phoneInput.required = true;
-
-          container.appendChild(nameInput);
-          container.appendChild(phoneInput);
-        }
-      }
-    });
-  });
-});
-
-// ==============================
-// PREVENT MULTIPLE REGISTRATION
-// ==============================
-document.getElementById("registrationForm")
-.addEventListener("submit", function(e){
-
-  const college = document.querySelector('input[name="College Name"]').value.trim().toLowerCase();
-
-  if(localStorage.getItem("registeredCollege") === college){
-    alert("This college has already registered!");
-    e.preventDefault();
-    return;
+  if (this.value === "Upside Down Abyss" || 
+      this.value === "Comeback Arena" || 
+      this.value === "Sunken Strategy Quest") {
+    count = 2;
+  } else if (this.value === "Aquavengers" || 
+             this.value === "Timeless Tides") {
+    count = 1;
   }
 
-  localStorage.setItem("registeredCollege", college);
+  for (let i = 1; i <= count; i++) {
+    container.innerHTML += `
+      <h3>Participant ${i}</h3>
+      <input type="text" name="Participant ${i} Name" required placeholder="Participant ${i} Name">
+      <input type="tel" name="Participant ${i} Contact" required placeholder="Participant ${i} Contact Number">
+    `;
+  }
 });
