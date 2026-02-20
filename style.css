@@ -590,5 +590,182 @@ footer { background:#004f7c; padding:20px; text-align:center; font-size:0.9rem; 
     from { opacity: 0.2; }
     to { opacity: 0.6; }
 }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
+body{
+font-family:'Poppins',sans-serif;
+color:white;
+background:radial-gradient(circle at top,#001d3d,#000814 70%);
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(0,255,255,0.3);
+}
+
+.instagram-link:hover{
+color:#00ffff;
+text-shadow:0 0 10px #00ffff;
+}
+
+/* HEADER */
+.site-header{
+text-align:center;
+padding:120px 20px 80px;
+position:relative;
+background:linear-gradient(135deg,#000814,#001d3d,#003566);
+overflow:hidden;
+}
+
+/* Aqua Sweep */
+.site-header::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:200%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(0,255,255,0.08),transparent);
+animation:sweep 10s infinite linear;
+}
+
+@keyframes sweep{
+from{left:-100%;}
+to{left:100%;}
+}
+
+/* Dragon Glow */
+.excelso-logo{
+width:clamp(250px,60vw,850px);
+max-width:95%;
+animation:logoReveal 1.5s ease-out forwards,dragonPulse 4s infinite alternate;
+}
+
+@keyframes logoReveal{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+
+@keyframes dragonPulse{
+from{filter:drop-shadow(0 0 25px rgba(255,100,0,0.6));}
+to{filter:drop-shadow(0 0 60px rgba(255,0,0,0.9));}
+}
+
+/* Fire Breath */
+.fire-breath{
+position:absolute;
+top:50%;
+left:65%;
+width:200px;
+height:200px;
+background:radial-gradient(circle,rgba(255,140,0,0.9),rgba(255,0,0,0.7),transparent 70%);
+transform:translate(-50%,-50%) scaleX(.3);
+opacity:0;
+border-radius:50%;
+filter:blur(12px);
+animation:dragonFire 6s infinite ease-in-out;
+}
+
+@keyframes dragonFire{
+0%,85%,100%{opacity:0;transform:translate(-50%,-50%) scaleX(.3);}
+90%{opacity:1;transform:translate(-40%,-50%) scaleX(1.5) scaleY(.7);}
+}
+
+/* Countdown */
+.countdown-box{
+margin-top:30px;
+font-size:clamp(1.5rem,4vw,2.5rem);
+font-weight:700;
+color:#00ffff;
+text-shadow:0 0 15px #00ffff;
+}
+
+/* Sections */
+section{
+padding:80px 10%;
+}
+
+h2{
+color:#00ffff;
+margin-bottom:20px;
+font-size:2rem;
+text-align:center;
+}
+
+/* Event Cards */
+.event-card{
+background:rgba(0,255,255,0.05);
+border:1px solid rgba(0,255,255,0.3);
+border-radius:20px;
+padding:25px;
+transition:.4s;
+backdrop-filter:blur(6px);
+box-shadow:0 0 15px rgba(0,255,255,0.1);
+}
+
+.event-card:hover{
+transform:translateY(-15px);
+box-shadow:0 0 40px rgba(0,255,255,0.5);
+}
+
+/* Golden Buttons */
+.rules-toggle{
+background:linear-gradient(45deg,#ffb703,#fb8500);
+color:#000;
+font-weight:700;
+border:none;
+border-radius:30px;
+padding:10px 20px;
+transition:.3s;
+}
+
+.rules-toggle:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #ff8500;
+}
+
+/* Contact Section Gold Frame */
+#contact{
+border:4px solid transparent;
+border-image:linear-gradient(45deg,#bf953f,#fcf6ba,#b38728) 1;
+background:rgba(0,0,0,0.5);
+box-shadow:0 0 25px rgba(255,215,0,0.3);
+}
+
+/* Particles */
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-image:
+radial-gradient(#00ffff 1px,transparent 1px),
+radial-gradient(#ffb703 1px,transparent 1px);
+background-size:60px 60px,120px 120px;
+animation:moveParticles 90s linear infinite;
+opacity:0.12;
+pointer-events:none;
+}
+
+@keyframes moveParticles{
+from{background-position:0 0;}
+to{background-position:600px 600px;}
+}
 
