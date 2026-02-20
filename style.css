@@ -227,6 +227,25 @@ section { padding:80px 10%; }
     width: 70%;
     max-width: 250px;
     height: auto;
+}.gradient-heading {
+    background: linear-gradient(
+        90deg,
+        #22054F,
+        #9065D1,
+        #28CFFD
+    );
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: headingFlow 4s linear infinite;
+}
+
+@keyframes headingFlow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 /* Registration Card Glass + Neon Glow */
 .registration-card {
