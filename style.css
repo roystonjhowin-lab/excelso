@@ -349,7 +349,32 @@ section { padding:80px 10%; }
 
 /* REGISTRATION */
 .registration-section iframe { border:none; margin-top:20px; }
+.registration-card input,
+.registration-card select {
+    width: 100%;
+    padding: 18px 20px;           /* bigger for easy typing */
+    margin: 12px 0 25px;          /* more spacing between fields */
+    font-size: 1.1rem;            /* bigger text inside */
+    border-radius: 15px;          /* nicer rounded corners */
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+}
 
+.registration-card input:focus,
+.registration-card select:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 20px #00ffff, 0 0 35px #00bfff;
+}@media (max-width: 768px) {
+    .registration-card input,
+    .registration-card select {
+        padding: 20px 20px;
+        font-size: 1.2rem;
+    }
+}
 /* VENUE */
 .venue-section iframe { margin-top:15px; border-radius:15px; }
 
