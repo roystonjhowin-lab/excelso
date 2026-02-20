@@ -25,10 +25,7 @@ a { text-decoration:none; color:white; }
 .department-line {
     color: #4fc3f7;/* 
 }
-   /* GENERAL RULES AND GUIDELINES */
-    .rules-title {
-    color: #00bfff !important;
-}
+    /* GENERAL RULES */
     .rules-section, 
 .rules-section * {
   color: #00bfff !important; /* Neon Blue forced */
