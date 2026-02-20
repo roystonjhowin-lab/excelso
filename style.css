@@ -817,3 +817,107 @@ button {
 html {
   scroll-behavior: smooth;
 }
+/* Registration Section */
+.registration-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #001f3f, #003366);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.registration-card {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  animation: fadeUp 0.6s ease;
+}
+
+.registration-card h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+/* Event Options */
+.event-option {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #f5f5f5;
+}
+
+.event-option:hover {
+  background: #e6f2ff;
+  transform: translateX(5px);
+}
+
+.event-option input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Participants Box */
+.participants-box {
+  margin-top: 20px;
+}
+
+.participants-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.participants-box input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,123,255,0.4);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
