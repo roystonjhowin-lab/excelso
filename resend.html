@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXCELSO’26 | Resend Registration</title>
+
+<link rel="stylesheet" href="resend.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="form-container">
+    <h1>Resend Registration</h1>
+
+    <form id="resendForm">
+
+        <!-- STEP 1 -->
+        <div class="form-step active" id="step1">
+
+            <div class="input-group">
+                <label>College Name</label>
+                <input type="text" id="college" required>
+            </div>
+
+            <div class="input-group">
+                <label>In-Charge Faculty</label>
+                <input type="text" id="faculty" required>
+            </div>
+
+            <button type="button" id="nextBtn">Next →</button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-step" id="step2">
+
+            <div class="input-group">
+                <label>Select Event</label>
+                <select id="eventSelect" required>
+                    <option value="">Select Event</option>
+                    <option value="2">Upside Down Abyss [The Ultimate Quiz-Wiz]</option>
+                    <option value="2">The Comeback Arena [The Marketing Multiverse]</option>
+                    <option value="2">Sunken Strategy Quest [The Treasure Hunt]</option>
+                    <option value="1">Aquavengers – The Oceanic Endgame [The Best Manager]</option>
+                    <option value="1">Timeless Tides [REELoad Moments]</option>
+                </select>
+            </div>
+
+            <div id="participantsContainer"></div>
+
+            <button type="submit">Resend Confirmation</button>
+        </div>
+
+        <p id="message" class="message"></p>
+
+    </form>
+</div>
+
+<script src="resend.js"></script>
+</body>
+</html>
