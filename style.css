@@ -24,7 +24,39 @@ a { text-decoration:none; color:white; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
     color: #4fc3f7;/* ==============================
+/* ==============================
+   🔹 GENERAL RULES TEXT - NEON BLUE
+============================== */
+.rules-section p,
+.rules-section li {
+  color: #00bfff; /* Neon Blue */
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 10px #00ffff,
+    0 0 20px #00bfff,
+    0 0 30px #00ffff;
+}
 
+/* Headings inside rules */
+.rules-section h2,
+.rules-section h3 {
+  color: #00bfff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #00ffff,
+    0 0 40px #00bfff,
+    0 0 60px #00ffff;
+}
+
+/* Optional: subtle 3D floating effect */
+.rules-section h2, .rules-section h3, .rules-section p, .rules-section li {
+  transform: translateZ(0);
+  perspective: 800px;
+}
 .cinematic-countdown {
     display: flex;
     justify-content: center;
