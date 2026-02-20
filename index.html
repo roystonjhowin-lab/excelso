@@ -239,24 +239,44 @@
       <button type="button" class="next-btn">Next</button>
     </div>
 
-    <!-- STEP 3 -->
-    <div class="form-step">
-      <label>Select Event</label>
-      <select name="Event" id="eventSelect" required>
-        <option value="">-- Choose Event --</option>
-        <option value="Upside Down Abyss">Upside Down Abyss (2 Participants)</option>
-        <option value="Comeback Arena">The Comeback Arena (2 Participants)</option>
-        <option value="Sunken Strategy Quest">Sunken Strategy Quest (2 Participants)</option>
-        <option value="Aquavengers">Aquavengers (1 Participant)</option>
-        <option value="Timeless Tides">Timeless Tides (1 Participant)</option>
-      </select>
+  <!-- STEP 3 -->
+<div class="form-step">
+  <label>Select Event(s)</label>
 
-      <div id="participantsContainer"></div>
+  <div class="event-options">
 
-      <button type="button" class="prev-btn">Back</button>
-      <button type="submit" class="submit-btn">Submit Registration</button>
-    </div>
+    <label class="event-card">
+      <input type="checkbox" value="Upside Down Abyss" data-count="2">
+      <span>Upside Down Abyss<br><small>The Ultimate Quiz-Wiz (2 Participants)</small></span>
+    </label>
 
+    <label class="event-card">
+      <input type="checkbox" value="The Comeback Arena" data-count="2">
+      <span>The Comeback Arena<br><small>The Marketing Multiverse (2 Participants)</small></span>
+    </label>
+
+    <label class="event-card">
+      <input type="checkbox" value="Sunken Strategy Quest" data-count="2">
+      <span>Sunken Strategy Quest<br><small>The Treasure Hunt (2 Participants)</small></span>
+    </label>
+
+    <label class="event-card">
+      <input type="checkbox" value="Aquavengers" data-count="1">
+      <span>Aquavengers<br><small>The Oceanic Endgame (1 Participant)</small></span>
+    </label>
+
+    <label class="event-card">
+      <input type="checkbox" value="Timeless Tides" data-count="1">
+      <span>Timeless Tides<br><small>REELoad Moments (1 Participant)</small></span>
+    </label>
+
+  </div>
+
+  <div id="participantsContainer"></div>
+
+  <button type="button" class="prev-btn">Back</button>
+  <button type="submit" class="submit-btn">Submit Registration</button>
+</div>
   </form>
 </section>
 
