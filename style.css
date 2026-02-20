@@ -23,7 +23,29 @@ a { text-decoration:none; color:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
-    color: #008BFF;/* 
+    color: #008BFF;/* }
+.cinematic-countdown span {
+    display: block;
+    padding: 20px 30px;
+    border-radius: 20px;
+    position: relative;
+}
+    .excelso-logo-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: smokePulse 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes smokePulse {
+    0%,100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.2); }
 }
     /* GENERAL RULES AND GUIDELINES */
     .rules-section, 
@@ -66,12 +88,6 @@ a { text-decoration:none; color:white; }
 .rules-section li {
   transform: translateZ(0);
   perspective: 800px;
-}
-.cinematic-countdown span {
-    display: block;
-    padding: 20px 30px;
-    border-radius: 20px;
-    position: relative;
 }
 .fire-side span {
     background: radial-gradient(circle, #ff4d00, #8b0000);
