@@ -219,50 +219,45 @@
 </section>
 
 <!-- REGISTRATION -->
-    <section id="register" class="registration-section">
-    <div class="registration-content">
+  <section id="registration" class="registration-section">
+  <h2>Register for EXCELSO’26</h2>
 
-        <h2 class="register-title">EXCELSO’26 Registration</h2>
+  <form id="registrationForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
 
-        <!-- STEP 1 -->
-        <div id="step1" class="form-step active">
-            <h3>College Details</h3>
-
-            <input type="text" id="collegeName" placeholder="College Name" required>
-            <input type="text" id="collegePlace" placeholder="College Location" required>
-            <input type="text" id="facultyName" placeholder="Faculty In-Charge Name" required>
-            <input type="tel" id="facultyContact" placeholder="Faculty Contact Number" required>
-
-            <button onclick="goToStep2()" class="register-btn">
-                Proceed to Event Selection
-            </button>
-        </div>
-
-        <!-- STEP 2 -->
-        <div id="step2" class="form-step">
-            <h3>Select Event</h3>
-
-            <select id="eventSelect" onchange="generateParticipants()" required>
-                <option value="">Choose Event</option>
-                <option value="2">UpsideDown Abyss (Quiz)</option>
-                <option value="2">Sunken Strategy Quest (Treasure Hunt)</option>
-                <option value="2">The Comeback Arena (Marketing)</option>
-                <option value="1">Aquavengers – Best Manager</option>
-                <option value="1">Timeless Tides (Reels)</option>
-            </select>
-
-            <div id="participantsContainer"></div>
-
-            <button onclick="submitRegistration()" class="register-btn">
-                Submit Registration
-            </button>
-        </div>
-
-        <p class="register-note">
-            FREE ENTRY 
-        </p>
-
+    <!-- STEP 1 -->
+    <div class="form-step active">
+      <label>College Name</label>
+      <input type="text" name="College Name" required placeholder="Enter your College Name">
+      <button type="button" class="next-btn">Next</button>
     </div>
+
+    <!-- STEP 2 -->
+    <div class="form-step">
+      <label>In-Charge Faculty Name</label>
+      <input type="text" name="In-Charge Faculty" required placeholder="Enter Faculty Name">
+      <button type="button" class="prev-btn">Back</button>
+      <button type="button" class="next-btn">Next</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-step">
+      <label>Select Event</label>
+      <select name="Event" id="eventSelect" required>
+        <option value="">-- Choose Event --</option>
+        <option value="Upside Down Abyss">Upside Down Abyss (2 Participants)</option>
+        <option value="Comeback Arena">The Comeback Arena (2 Participants)</option>
+        <option value="Sunken Strategy Quest">Sunken Strategy Quest (2 Participants)</option>
+        <option value="Aquavengers">Aquavengers (1 Participant)</option>
+        <option value="Timeless Tides">Timeless Tides (1 Participant)</option>
+      </select>
+
+      <div id="participantsContainer"></div>
+
+      <button type="button" class="prev-btn">Back</button>
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </div>
+
+  </form>
 </section>
 
 <!-- VENUE -->
