@@ -23,9 +23,7 @@ a { text-decoration:none; color:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
-    color: #fff607;/* ==============================
-   CINEMATIC FIRE & AQUA COUNTDOWN
-============================== */
+    color: Linear-gradient(odeg,orange,red);/* ==============================
 
 .cinematic-countdown {
     display: flex;
@@ -138,8 +136,7 @@ section { padding:80px 10%; }
     0 0 120px #00ffff;
   animation: dragonGlow 6s infinite alternate;
 }
-
-/* 🔥 Animated Neon Glow */
+/* Animated Neon Glow */
 @keyframes dragonGlow {
   0% {
     box-shadow:
@@ -155,7 +152,7 @@ section { padding:80px 10%; }
   }
 }
 
-/* 🔥 Dragon Fire Moving Background */
+/* Dragon Fire Moving Background */
 .rules-section::before {
   content: "";
   position: absolute;
