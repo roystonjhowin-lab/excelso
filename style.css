@@ -820,3 +820,31 @@ button {
 .form-step.active {
   display: block;
 }
+.event-options {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.event-card {
+  display: block;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+  border-color: gold;
+}
+
+.event-card input {
+  margin-right: 10px;
+}
+
+.event-card small {
+  color: #ddd;
+}
