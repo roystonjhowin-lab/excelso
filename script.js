@@ -101,4 +101,35 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+console.log("EXCELSO’26 Website Loaded Successfully!");
 
+// RULES TOGGLE (UNCHANGED LOGIC)
+document.querySelectorAll('.rules-toggle').forEach(button=>{
+button.addEventListener('click',()=>{
+const rulesDiv=document.getElementById(button.getAttribute('aria-controls'));
+const isExpanded=button.getAttribute('aria-expanded')==='true';
+button.setAttribute('aria-expanded',!isExpanded);
+rulesDiv.style.display=rulesDiv.style.display==='block'?'none':'block';
+});
+});
+
+// COUNTDOWN
+const targetDate=new Date("March 7, 2026 08:30:00").getTime();
+const countdownEl=document.getElementById("countdown");
+
+setInterval(()=>{
+const now=new Date().getTime();
+const distance=targetDate-now;
+
+if(distance<=0){
+countdownEl.innerHTML="🔥 EXCELSO’26 IS LIVE!";
+return;
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+countdownEl.innerHTML=
+`${days} Days | ${hours} Hours | ${minutes} Minutes`;
+},1000);
