@@ -25,7 +25,12 @@ a { text-decoration:none; color:white; }
 .department-line {
     color: #008BFF;/* 
 }
-    /* GENERAL RULES */
+    /* GENERAL RULES AND GUIDELINES */
+   .gradient-text {
+  background: linear-gradient(90deg, #02e0b9, #f9db84, #ff8334);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
     .rules-section, 
 .rules-section * {
   color: #00bfff !important; /* Neon Blue forced */
