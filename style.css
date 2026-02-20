@@ -814,3 +814,6 @@ button {
 .prev-btn {
   background: #ccc;
 }
+html {
+  scroll-behavior: smooth;
+}
