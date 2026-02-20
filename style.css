@@ -848,3 +848,54 @@ button {
 .event-card small {
   color: #ddd;
 }
+.event-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.event-card input {
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+}
+
+.event-card span {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.event-card small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Mobile Fix */
+@media (max-width: 600px) {
+  .event-card {
+    padding: 12px;
+  }
+
+  .event-card span {
+    font-size: 14px;
+  }
+}
