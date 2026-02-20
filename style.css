@@ -36,8 +36,70 @@ section { padding:80px 10%; }
 .about-section p { margin-top:15px; }
 
 /* GENERAL RULES */
-.rules-section { background:#0096c7; border-radius:15px; padding:40px 20px; margin-bottom:50px; position:relative; }
-.free-entry { position:absolute; top:20px; right:20px; background:#00ffff; color:#004f7c; padding:8px 20px; border-radius:25px; font-weight:700; }
+.rules-section {
+  position: relative;
+  padding: 60px 30px;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #050014, #0a0024, #14003a);
+  color: white;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  box-shadow:
+    0 0 30px #00ffff,
+    0 0 60px #ff00ff,
+    0 0 120px #00ffff;
+  animation: dragonGlow 6s infinite alternate;
+}
+
+/* 🔥 Animated Neon Glow */
+@keyframes dragonGlow {
+  0% {
+    box-shadow:
+      0 0 20px #00ffff,
+      0 0 40px #ff00ff,
+      0 0 80px #00ffff;
+  }
+  100% {
+    box-shadow:
+      0 0 40px #ff00ff,
+      0 0 80px #00ffff,
+      0 0 160px #ff00ff;
+  }
+}
+
+/* 🔥 Dragon Fire Moving Background */
+.rules-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #00ffea,
+    #ff00ff,
+    #ff0000
+  );
+  background-size: 400% 400%;
+  animation: dragonFire 12s linear infinite;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+@keyframes dragonFire {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content above effect */
+.rules-section * {
+  position: relative;
+  z-index: 2;
+}
 
 /* EVENTS GRID */
 .event-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:40px; }
