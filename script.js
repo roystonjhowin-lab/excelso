@@ -154,3 +154,42 @@ eventSelect.addEventListener("change", function() {
     `;
   }
 });
+document.addEventListener("DOMContentLoaded", function() {
+
+  const checkboxes = document.querySelectorAll('.event-card input');
+  const container = document.getElementById("participantsContainer");
+
+  checkboxes.forEach(box => {
+    box.addEventListener("change", updateParticipants);
+  });
+
+  function updateParticipants() {
+
+    container.innerHTML = "";
+
+    checkboxes.forEach(box => {
+
+      if (box.checked) {
+
+        const eventName = box.value;
+        const count = parseInt(box.dataset.count);
+
+        const eventSection = document.createElement("div");
+        eventSection.innerHTML = `<h3>${eventName}</h3>`;
+
+        for (let i = 1; i <= count; i++) {
+
+          eventSection.innerHTML += `
+            <input type="hidden" name="Selected Events[]" value="${eventName}">
+            <input type="text" name="${eventName} - Participant ${i} Name" required placeholder="Participant ${i} Name">
+            <input type="tel" name="${eventName} - Participant ${i} Contact" required placeholder="Participant ${i} Contact Number">
+          `;
+        }
+
+        container.appendChild(eventSection);
+      }
+
+    });
+  }
+
+});
