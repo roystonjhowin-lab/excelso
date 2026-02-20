@@ -242,16 +242,34 @@
 
     <!-- STEP 3 -->
     <div class="form-step">
-      <label>Select Event</label>
-      <select name="Event" id="eventSelect" required>
-        <option value="">-- Choose Event --</option>
-        <option value="Upside Down Abyss">Upside Down Abyss (2 Participants)</option>
-        <option value="Comeback Arena">The Comeback Arena (2 Participants)</option>
-        <option value="Sunken Strategy Quest">Sunken Strategy Quest (2 Participants)</option>
-        <option value="Aquavengers">Aquavengers (1 Participant)</option>
-        <option value="Timeless Tides">Timeless Tides (1 Participant)</option>
-      </select>
+    <h3>Select Events</h3>
 
+<label>
+  <input type="checkbox" class="event-checkbox" value="Upside Down Abyss">
+  Upside Down Abyss
+</label>
+
+<label>
+  <input type="checkbox" class="event-checkbox" value="Comeback Arena">
+  Comeback Arena
+</label>
+
+<label>
+  <input type="checkbox" class="event-checkbox" value="Sunken Strategy Quest">
+  Sunken Strategy Quest
+</label>
+
+<label>
+  <input type="checkbox" class="event-checkbox" value="Aquavengers">
+  Aquavengers
+</label>
+
+<label>
+  <input type="checkbox" class="event-checkbox" value="Timeless Tides">
+  Timeless Tides
+</label>
+
+<div id="participantsContainer"></div>
       <div id="participantsContainer"></div>
 
       <button type="button" class="prev-btn">Back</button>
