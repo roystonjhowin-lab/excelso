@@ -22,7 +22,8 @@ a { text-decoration:none; color:white; }
 .vertical-bar { width:2px; height:40px; background:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
-   .radial-gradient { circle, #f9db84 0%, #ff8334 50%, #02e0b9 100% } ;/* 
+.department-line {
+    color: #008BFF;/* 
 }
     /* GENERAL RULES */
     .rules-section, 
