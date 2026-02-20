@@ -814,9 +814,3 @@ button {
 .prev-btn {
   background: #ccc;
 }
-.form-step {
-  display: none;
-}
-.form-step.active {
-  display: block;
-}
