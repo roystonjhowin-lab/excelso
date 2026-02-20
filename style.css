@@ -23,7 +23,8 @@ a { text-decoration:none; color:white; }
 .college-info { font-size:0.9rem; font-weight:600; }
 .department-line { font-size:1.2rem; margin-bottom:10px; font-weight:600; }
 .department-line {
-    color: #4fc3f7;/* /* ==============================
+    color: #4fc3f7;/* 
+    ==============================
    🔹 GENERAL RULES & GUIDELINES - NEON BLUE FORCED
 ============================== */
 .rules-section, 
@@ -59,6 +60,13 @@ a { text-decoration:none; color:white; }
   transform: translateZ(0);
   perspective: 800px;
 }
+/* Optional: subtle 3D floating effect */
+.rules-section h2, 
+.rules-section h3, 
+.rules-section p, 
+.rules-section li {
+  transform: translateZ(0);
+  perspective: 800px;
 }
 .cinematic-countdown span {
     display: block;
