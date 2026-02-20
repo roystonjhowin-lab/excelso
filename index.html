@@ -219,10 +219,10 @@
 </section>
 
 <!-- REGISTRATION -->
-<section id="registration" class="registration-section">
+  <section id="registration" class="registration-section">
   <h2>Register for EXCELSO’26</h2>
 
-  <form id="registrationForm" action="https://formspree.io/f/maqdddzz" method="POST">
+  <form id="registrationForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
 
     <!-- STEP 1 -->
     <div class="form-step active">
@@ -239,44 +239,24 @@
       <button type="button" class="next-btn">Next</button>
     </div>
 
-  <!-- STEP 3 -->
-<div class="form-step">
-  <label>Select Event(s)</label>
+    <!-- STEP 3 -->
+    <div class="form-step">
+      <label>Select Event</label>
+      <select name="Event" id="eventSelect" required>
+        <option value="">-- Choose Event --</option>
+        <option value="Upside Down Abyss">Upside Down Abyss (2 Participants)</option>
+        <option value="Comeback Arena">The Comeback Arena (2 Participants)</option>
+        <option value="Sunken Strategy Quest">Sunken Strategy Quest (2 Participants)</option>
+        <option value="Aquavengers">Aquavengers (1 Participant)</option>
+        <option value="Timeless Tides">Timeless Tides (1 Participant)</option>
+      </select>
 
-  <div class="event-options">
+      <div id="participantsContainer"></div>
 
-    <label class="event-card">
-      <input type="checkbox" name="Selected Events[]" value="Upside Down Abyss" data-count="2">
-      <span>Upside Down Abyss<br><small>The Ultimate Quiz-Wiz (2 Participants)</small></span>
-    </label>
+      <button type="button" class="prev-btn">Back</button>
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </div>
 
-    <label class="event-card">
-      <input type="checkbox" name="Selected Events[]" value="The Comeback Arena" data-count="2">
-      <span>The Comeback Arena<br><small>The Marketing Multiverse (2 Participants)</small></span>
-    </label>
-
-    <label class="event-card">
-    <input type="checkbox" name="Selected Events[]" value="Sunken strategy Quest" data-count="2">
-      <span>Sunken Strategy Quest<br><small>The Treasure Hunt (2 Participants)</small></span>
-    </label>
-
-    <label class="event-card">
-      <input type="checkbox" name="Selected Events[]" value="aquavengers" data-count="2">
-      <span>Aquavengers<br><small>The Oceanic Endgame (1 Participant)</small></span>
-    </label>
-
-    <label class="event-card">
-     <input type="checkbox" name="Selected Events[]" value="Timeless Tides" data-count="2">
-      <span>Timeless Tides<br><small>REELoad Moments (1 Participant)</small></span>
-    </label>
-
-  </div>
-
-  <div id="participantsContainer"></div>
-
-  <button type="button" class="prev-btn">Back</button>
-  <button type="submit" class="submit-btn">Submit Registration</button>
-</div>
   </form>
 </section>
 
