@@ -102,4 +102,55 @@ window.addEventListener("scroll", () => {
   });
 });
 console.log("EXCELSO’26 Website Loaded Successfully!");
+const steps = document.querySelectorAll(".form-step");
+const nextBtns = document.querySelectorAll(".next-btn");
+const prevBtns = document.querySelectorAll(".prev-btn");
+let currentStep = 0;
 
+function showStep(step) {
+  steps.forEach((el, index) => {
+    el.classList.toggle("active", index === step);
+  });
+}
+
+nextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentStep++;
+    showStep(currentStep);
+  });
+});
+
+prevBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentStep--;
+    showStep(currentStep);
+  });
+});
+
+showStep(currentStep);
+
+// Dynamic Participants
+const eventSelect = document.getElementById("eventSelect");
+const container = document.getElementById("participantsContainer");
+
+eventSelect.addEventListener("change", function() {
+  container.innerHTML = "";
+  let count = 0;
+
+  if (this.value === "Upside Down Abyss" || 
+      this.value === "Comeback Arena" || 
+      this.value === "Sunken Strategy Quest") {
+    count = 2;
+  } else if (this.value === "Aquavengers" || 
+             this.value === "Timeless Tides") {
+    count = 1;
+  }
+
+  for (let i = 1; i <= count; i++) {
+    container.innerHTML += `
+      <h3>Participant ${i}</h3>
+      <input type="text" name="Participant ${i} Name" required placeholder="Participant ${i} Name">
+      <input type="tel" name="Participant ${i} Contact" required placeholder="Participant ${i} Contact Number">
+    `;
+  }
+});
