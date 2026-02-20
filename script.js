@@ -130,27 +130,43 @@ prevBtns.forEach(btn => {
 showStep(currentStep);
 
 // Dynamic Participants
-const eventSelect = document.getElementById("eventSelect");
+const eventCheckboxes = document.querySelectorAll(".event-checkbox");
 const container = document.getElementById("participantsContainer");
 
-eventSelect.addEventListener("change", function() {
-  container.innerHTML = "";
-  let count = 0;
-
-  if (this.value === "Upside Down Abyss" || 
-      this.value === "Comeback Arena" || 
-      this.value === "Sunken Strategy Quest") {
-    count = 2;
-  } else if (this.value === "Aquavengers" || 
-             this.value === "Timeless Tides") {
-    count = 1;
-  }
-
-  for (let i = 1; i <= count; i++) {
-    container.innerHTML += `
-      <h3>Participant ${i}</h3>
-      <input type="text" name="Participant ${i} Name" required placeholder="Participant ${i} Name">
-      <input type="tel" name="Participant ${i} Contact" required placeholder="Participant ${i} Contact Number">
-    `;
-  }
+eventCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener("change", generateParticipants);
 });
+
+function generateParticipants() {
+  container.innerHTML = "";
+
+  eventCheckboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      let count = 0;
+
+      if (
+        checkbox.value === "Upside Down Abyss" ||
+        checkbox.value === "Comeback Arena" ||
+        checkbox.value === "Sunken Strategy Quest"
+      ) {
+        count = 2;
+      } else if (
+        checkbox.value === "Aquavengers" ||
+        checkbox.value === "Timeless Tides"
+      ) {
+        count = 1;
+      }
+
+      let html = `<h3>${checkbox.value}</h3>`;
+
+      for (let i = 1; i <= count; i++) {
+        html += `
+          <input type="text" name="${checkbox.value} Participant ${i} Name" required placeholder="Participant ${i} Name">
+          <input type="tel" name="${checkbox.value} Participant ${i} Contact" required placeholder="Participant ${i} Contact Number">
+        `;
+      }
+
+      container.innerHTML += html;
+    }
+  });
+}
