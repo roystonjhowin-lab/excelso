@@ -768,4 +768,49 @@ pointer-events:none;
 from{background-position:0 0;}
 to{background-position:600px 600px;}
 }
+.registration-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #001f3f, #003366);
+  color: white;
+  text-align: center;
+}
 
+.registration-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.next-btn, .submit-btn {
+  background: gold;
+  color: black;
+}
+
+.prev-btn {
+  background: #ccc;
+}
